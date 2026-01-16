@@ -1,0 +1,149 @@
+/* --- Reset & Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-charcoal: #333333;
+    --accent-orange: #e67e22;
+    --text-color: #2c3e50;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--primary-charcoal);
+    color: white;
+    padding: 3rem 10%;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-orange);
+}
+
+/* --- Layout --- */
+main {
+    padding: 3rem 10%; /* Full screen maximize */
+}
+
+article {
+    margin-bottom: 5rem;
+}
+
+.section-banner {
+    border-bottom: 4px solid var(--accent-orange);
+    color: var(--primary-charcoal);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* --- Profile Left, Info Right --- */
+.personal-info-container {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+.profile-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    /* Clean orange accent on the left */
+    box-shadow: -12px 12px 0px var(--accent-orange); 
+}
+
+.info-text {
+    flex: 1;
+}
+
+.info-text h3 {
+    font-size: 1.8rem;
+    color: var(--accent-orange);
+    margin-bottom: 20px;
+}
+
+.info-text p {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+/* --- Simple Life Stages --- */
+.life-stages {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.stage h3 {
+    color: var(--primary-charcoal);
+    border-left: 5px solid var(--accent-orange);
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.stage p {
+    font-size: 1.1rem;
+    text-align: justify;
+    padding-left: 20px;
+}
+
+/* --- Hobbies & Favorites --- */
+.hobbies-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.hobbies-columns ul {
+    padding-left: 20px;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.favorites-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* --- Footer --- */
+footer {
+    background: var(--primary-charcoal);
+    color: white;
+    text-align: center;
+    padding: 3rem;
+    margin-top: 50px;
+}
