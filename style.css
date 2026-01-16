@@ -1,149 +1,130 @@
-/* --- Reset & Global Styles --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
 
-:root {
-    --primary-charcoal: #333333;
-    --accent-orange: #e67e22;
-    --text-color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #ffffff;
-    color: var(--text-color);
-    line-height: 1.6;
-    scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
+  background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+  color: #333;
+  padding: 20px;
 }
 
-/* --- Header --- */
 header {
-    background-color: var(--primary-charcoal);
-    color: white;
-    padding: 3rem 10%;
-    text-align: center;
+  background: linear-gradient(135deg, #ddf315, #f3dd14);
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #2fa0eb;
+  text-shadow: 2px 2px #160a57;
+  margin-block-end: 10px;
+  transition: transform 0.3s ease;
+}
+
+header h1:hover {
+  transform: scale(1.05);
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+  margin: 0 15px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--accent-orange);
+  color: #ffdd00;
 }
 
-/* --- Layout --- */
+
 main {
-    padding: 3rem 10%; /* Full screen maximize */
+  margin-block-start: 30px;
 }
+
+article h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #023047;
+  border-inline-start: 5px solid #00b4d8;
+  padding-inline-start: 10px;
+  margin-block-end: 15px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f1f9ff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.profile img {
+  inline-size: 150px;
+  border-radius: 50%;
+  border: 3px solid #00b4d8;
+}
+
 
 article {
-    margin-bottom: 5rem;
+  margin-block-end: 40px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
-.section-banner {
-    border-bottom: 4px solid var(--accent-orange);
-    color: var(--primary-charcoal);
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-    text-transform: uppercase;
+
+figure {
+  margin: 20px 0;
+  text-align: center;
 }
 
-/* --- Profile Left, Info Right --- */
-.personal-info-container {
-    display: flex;
-    align-items: center; /* Centers items vertically */
-    gap: 60px;
-    margin-bottom: 50px;
+figure img {
+  inline-size: 100%;
+  max-inline-size: 300px;
+  block-size: auto;
+  border-radius: 12px;
+  border: 3px solid #8ecae6;
+  transition: transform 0.3s ease;
 }
 
-.profile-image img {
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-    /* Clean orange accent on the left */
-    box-shadow: -12px 12px 0px var(--accent-orange); 
+figure img:hover {
+  transform: scale(1.05);
 }
 
-.info-text {
-    flex: 1;
+figcaption {
+  margin-block-start: 10px;
+  font-style: italic;
+  font-weight: 500;
+  color: #0077b6;
+  background: #e0f7fa;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.info-text h3 {
-    font-size: 1.8rem;
-    color: var(--accent-orange);
-    margin-bottom: 20px;
-}
 
-.info-text p {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-    text-align: justify;
-}
-
-/* --- Simple Life Stages --- */
-.life-stages {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.stage h3 {
-    color: var(--primary-charcoal);
-    border-left: 5px solid var(--accent-orange);
-    padding-left: 15px;
-    margin-bottom: 10px;
-}
-
-.stage p {
-    font-size: 1.1rem;
-    text-align: justify;
-    padding-left: 20px;
-}
-
-/* --- Hobbies & Favorites --- */
-.hobbies-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-}
-
-.hobbies-columns ul {
-    padding-left: 20px;
-}
-
-.favorites-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-}
-
-.favorites-grid img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-/* --- Footer --- */
 footer {
-    background: var(--primary-charcoal);
-    color: white;
-    text-align: center;
-    padding: 3rem;
-    margin-top: 50px;
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  border-radius: 8px;
+  margin-block-start: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
